@@ -1,1 +1,212 @@
 @import "reset";
+@font-face {
+    font-family: "MyriadPro";
+    src: local(Arial);
+    src: url("../fonts/MyriadPro.otf") format("opentype");
+}
+body {
+    background-color: #793200;
+    font-family: "MyriadPro", sans-serif;
+}
+.wrapper {
+    width: 1200px;
+    margin: 100px auto 0;
+    padding: 20px 0 32px 0;
+    position: relative;
+    display: flex;
+    .button-click {
+        width: 1200px;
+        margin: 0 auto;
+        padding: 13px 59px 0 59px;
+        box-sizing: border-box;
+        position: relative;
+        display: flex;
+        align-items: center;
+        background-image: url(../image/main.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        .btn-info {
+            width: 55px;
+            height: 55px;
+            position: relative;       
+            background-image: url(../image/btn-info-normal.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .btn-info::after {
+            content: " ";
+            width: 9px;
+            height: 28px;
+            position: absolute;
+            top: 13px;
+            left: 22px;
+            background-image: url(../image/info-sign.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+        } 
+        .totalbet {
+            width: 183px;
+            height: 55px;
+            margin-right: 2px; 
+            padding: 0 3px 0 3px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-image: url(../image/totalbet.png);
+            background-size: contain;
+            background-repeat: no-repeat;           
+            .btn-minus {
+                width: 45px;
+                height: 45px;  
+                position: relative;     
+                background-image: url(../image/btn-minus-normal.png);
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+            .btn-minus::after {
+                content: " ";
+                width: 19px;
+                height: 8px;
+                position: absolute;
+                top: 19px;
+                left: 13px;
+                background-image: url(../image/minussign-normal.png);
+                background-size: contain;
+                background-repeat: no-repeat;
+            }  
+            .btn-plus {
+                width: 45px;
+                height: 45px; 
+                position: relative;     
+                background-image: url(../image/btn-minus-normal.png);
+                background-size: cover;
+                background-repeat: no-repeat;
+            } 
+            .btn-plus::after {
+                content: " ";
+                width: 19px;
+                height: 16px;
+                position: absolute;
+                top: 15px;
+                left: 15px;
+                background-image: url(../image/plussign-normal.png);
+                background-size: contain;
+                background-repeat: no-repeat;
+            }    
+        }
+        .coin {
+            width: 95px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-image: url(../image/coin.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+        .winbox {
+            width: 398px;
+            height: 93px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 50px;
+            letter-spacing: 2px;
+            font-weight: bold;
+            color: #FFE500;
+            background-image: url(../image/winbox.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+        }        
+        .turbo {
+            width: 78px;
+            height: 48px;
+            margin-right: 4px;
+            padding: 4px;
+            box-sizing: border-box;
+            background-image: url(../image/btn-turbo-on.png);
+            background-size: contain;
+            background-repeat: no-repeat; 
+            .checkbox {
+                height: 25px;
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-image: url(../image/turbo-normal.png);
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+            .checkbox::after {
+                content: " ";
+                width: 50px;
+                height: 40px;
+                position: absolute;
+                top: 6px;
+                left: 9px;
+                background-image: url(../image/fontturbo-normal.png);
+                background-size: contain;
+                background-repeat: no-repeat;
+            } 
+        }
+        .btn-auto {
+            width: 188px;
+            height: 53px;
+            padding-left: 20px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: left;
+            box-sizing: border-box;
+            background-image: url(../image/auto-normal.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+        .btn-auto::after {
+            content: " ";
+            width: 45px;
+            height: 40px;
+            position: absolute;
+            top: 20px;
+            left: 35px;
+            background-image: url(../image/fontauto-normal.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+        } 
+    }
+    .spin {
+        width: 158px;
+        height: 158px;
+        position: absolute;
+        top: 0;
+        right: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url(../image/bgspin-normal.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        .spin-sign {
+            width: 100px;
+            height: 80px;
+            background-image: url(../image/spinsign-normal.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            animation-name: rotate; 
+            animation-duration: 7s; 
+            animation-iteration-count: infinite; 
+            animation-timing-function: linear;
+        }
+        @keyframes rotate { 
+            0% { 
+              transform: rotateZ(360deg); 
+            } 
+            10% { 
+              transform: rotateZ(0deg); 
+            } 
+            100% { 
+                transform: rotateZ(0deg); 
+            }
+        } 
+    }
+}
