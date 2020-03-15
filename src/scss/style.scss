@@ -1,1 +1,24 @@
 @import "reset";
+@import "spin";
+@import "autospin";
+@import "turbo";
+@import "btn-info";
+@import "bet";
+@import "bottom-panel";
+
+@font-face {
+    font-family: "MyriadPro";
+    src: local(Arial);
+    src: url("../fonts/MyriadPro.otf") format("opentype");
+}
+body {
+    font-family: "MyriadPro", sans-serif;
+}
+
+.wrapper {
+    width: 1200px;
+    margin: 100px auto 0;
+    padding: 20px 0 32px 0;
+    position: relative;
+    display: flex;
+}
