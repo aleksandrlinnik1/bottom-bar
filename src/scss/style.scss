@@ -1,4 +1,6 @@
 @import "reset";
+@import "spin";
+
 @font-face {
     font-family: "MyriadPro";
     src: local(Arial);
@@ -306,43 +308,5 @@ body {
                 top: -138px;
             }
         } 
-    }
-    .spin {
-        width: 158px;
-        height: 158px;
-        position: absolute;
-        top: 0;
-        right: 60px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-image: url(../image/bgspin-normal.png);
-        background-size: contain;
-        background-repeat: no-repeat;
-        .spin-sign {
-            width: 100px;
-            height: 80px;
-            background-image: url(../image/spinsign-normal.png);
-            background-size: contain;
-            background-repeat: no-repeat;
-            animation-name: rotate; 
-            animation-duration: 7s; 
-            animation-iteration-count: infinite; 
-            animation-timing-function: linear;
-        }
-        @keyframes rotate { 
-            0% { 
-              transform: rotateZ(360deg); 
-            } 
-            10% { 
-              transform: rotateZ(0deg); 
-            } 
-            100% { 
-                transform: rotateZ(0deg); 
-            }
-        } 
-    }
-    .spin:hover {
-        background-image: url(../image/bgspin-hover.png);
     }
 }

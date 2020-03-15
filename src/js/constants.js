@@ -23,3 +23,6 @@ export const COINS = [
 ];
 
 export const COIN_VALUE = 15;
+
+export const SPIN_BUTTON_DISABLED_TIMEOUT = 500;
+export const SPIN_DURATION = 1000;

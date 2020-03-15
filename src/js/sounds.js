@@ -7,8 +7,8 @@ export function initSounds() {
     wrapper.addEventListener('click', playButtonSound, true);
 }
 
-function playButtonSound({ target }) {
-    if (target.classList.contains("btn")) {
+function playButtonSound({ target: { classList } }) {
+    if (classList.contains("btn") && !classList.contains('disabled')) {
         buttonSound.pause();
         buttonSound.currentTime = 0;
         buttonSound.play();
