@@ -8,30 +8,48 @@
 </head>
 <body>
     <section class="wrapper">
-        <div class="button-click">
-            <div class="btn-info"></div>
-            <div class="totalbet">
-                <div class="btn-minus"></div>
-                <p>TOTALBET</p>
-                <div class="btn-plus"></div>
+        <div class="bottom-panel">
+            <div class="btn btn-info"></div>
+            <div class="total-bet">
+                <div class="btn btn-minus"></div>
+                <div class="total-counter">
+                    <div class="coinsign"></div>
+                    <div class="coincounter">¥0000.00</div>
+                </div>
+                <div class="btn btn-plus"></div>
             </div>
             <div class="coin">
-                <p>COIN</p>
+                <div class="coinsign"></div>
+                <div class="coincounter">¥0000</div>
             </div>
             <div class="winbox">
                 <p>GOOD LUCK!</p>
             </div>
             <div class="turbo">
-                <div class="checkbox">
-                </div>
+                <div class="btn checkbox"></div>
             </div>
-            <div class="btn-auto">
+            <div class="autospin">
+                <div class="spinselect">
+                    <ul>
+                        <li class="btn" href="#">
+                            <span class="feature-normal"></span>
+                            UNTIL FEATURE
+                        </li>
+                        <li class="btn" href="#">25 SPIN</li>
+                        <li class="btn" href="#">20 SPIN</li>
+                        <li class="btn" href="#">15 SPIN</li>
+                        <li class="btn" href="#">10 SPIN</li>
+                        <li class="btn" href="#">5 SPIN</li>
+                    </ul>
+                </div>
+                <div class="btn btn-auto"></div>
             </div>
         </div>
         <div class="spin">
-            <div class="spin-sign"></div>
+            <div class="btn spin-sign"></div>
         </div>
     </section>
+    <audio id="btn-sound" src="./sounds/bclick.wav"></audio>
     <script src="js/main.js"></script>
 </body>
 </html>

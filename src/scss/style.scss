@@ -5,16 +5,179 @@
     src: url("../fonts/MyriadPro.otf") format("opentype");
 }
 body {
-    background-color: #793200;
     font-family: "MyriadPro", sans-serif;
 }
+
+.turbo {
+    position: relative;
+    width: 78px;
+    height: 48px;
+    margin-right: 4px;
+    padding: 4px;
+    box-sizing: border-box;
+    background-image: url(../image/btn-turbo-off.png);
+    background-size: contain;
+    background-repeat: no-repeat; 
+
+    &.on {
+        background-image: url(../image/btn-turbo-on.png);
+        .checkbox {
+            bottom: auto;
+            top: 0;
+        }
+    }
+
+    .checkbox {
+        height: 25px;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        background-image: url(../image/turbo-normal.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        cursor: pointer;
+
+        &:hover {
+            background-image: url(../image/turbo-hover.png);
+        }
+        &:after {
+            content: " ";
+            width: 50px;
+            height: 15px;
+            position: absolute;
+            top: 6px;
+            left: 9px;
+            background-image: url(../image/fontturbo-normal.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+        &:active {
+            background-image: url(../image/turbo-click.png);
+        }
+    }
+}
+
+.btn-info {
+    width: 55px;
+    height: 55px;
+    position: relative;       
+    background-image: url(../image/btn-info-normal.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    cursor: pointer;
+
+    &:hover {
+        background-image: url(../image/btn-info-hover.png);
+    }
+
+    &:after {
+        content: " ";
+        width: 9px;
+        height: 28px;
+        position: absolute;
+        top: 13px;
+        left: 22px;
+        background-image: url(../image/info-sign.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+}
+
+.total-bet {
+    width: 183px;
+    height: 55px;
+    margin-right: 2px; 
+    padding: 0 3px 0 3px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    background-image: url(../image/totalbet.png);
+    background-size: contain;
+    background-repeat: no-repeat;      
+}
+
+.coinsign {
+    width: 66px;
+    height: 12px;
+    background-image: url(../image/totalbetsign.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.coincounter {
+    height: 15px;
+    text-align: center;
+    color: #FFE500;
+}
+
+.btn-minus, .btn-plus {
+    width: 45px;
+    height: 45px;  
+    position: relative;     
+    background-image: url(../image/btn-minus-normal.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    &.disabled {
+        pointer-events: none;
+        background-image: url(../image/btn-minus-disable.png);
+    }
+    &:hover {
+        background-image: url(../image/btn-minus-hover.png);
+    }
+    &:active {
+        background-image: url(../image/btn-minus-click.png);
+    }
+}
+
+.btn-minus {
+    &.disabled {
+        &:after {
+            background-image: url(../image/minussign-disable.png);
+        }
+    }
+    &:after {
+        content: " ";
+        width: 19px;
+        height: 8px;
+        position: absolute;
+        top: 19px;
+        left: 13px;
+        background-image: url(../image/minussign-normal.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+}
+
+.btn-plus {
+    &.disabled {
+        &:after {
+            background-image: url(../image/plussign-disable.png);
+        }
+    }
+    &:after {
+        content: " ";
+        width: 19px;
+        height: 16px;
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        background-image: url(../image/plussign-normal.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+}
+
+
 .wrapper {
     width: 1200px;
     margin: 100px auto 0;
     padding: 20px 0 32px 0;
     position: relative;
     display: flex;
-    .button-click {
+    .bottom-panel {
         width: 1200px;
         margin: 0 auto;
         padding: 13px 59px 0 59px;
@@ -25,84 +188,32 @@ body {
         background-image: url(../image/main.png);
         background-position: center;
         background-repeat: no-repeat;
-        .btn-info {
-            width: 55px;
-            height: 55px;
-            position: relative;       
-            background-image: url(../image/btn-info-normal.png);
-            background-size: cover;
-            background-repeat: no-repeat;
-        }
-        .btn-info::after {
-            content: " ";
-            width: 9px;
-            height: 28px;
-            position: absolute;
-            top: 13px;
-            left: 22px;
-            background-image: url(../image/info-sign.png);
-            background-size: contain;
-            background-repeat: no-repeat;
-        } 
-        .totalbet {
-            width: 183px;
-            height: 55px;
-            margin-right: 2px; 
-            padding: 0 3px 0 3px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            background-image: url(../image/totalbet.png);
-            background-size: contain;
-            background-repeat: no-repeat;           
-            .btn-minus {
-                width: 45px;
-                height: 45px;  
-                position: relative;     
-                background-image: url(../image/btn-minus-normal.png);
-                background-size: cover;
-                background-repeat: no-repeat;
-            }
-            .btn-minus::after {
-                content: " ";
-                width: 19px;
-                height: 8px;
-                position: absolute;
-                top: 19px;
-                left: 13px;
-                background-image: url(../image/minussign-normal.png);
-                background-size: contain;
-                background-repeat: no-repeat;
-            }  
-            .btn-plus {
-                width: 45px;
-                height: 45px; 
-                position: relative;     
-                background-image: url(../image/btn-minus-normal.png);
-                background-size: cover;
-                background-repeat: no-repeat;
-            } 
-            .btn-plus::after {
-                content: " ";
-                width: 19px;
-                height: 16px;
-                position: absolute;
-                top: 15px;
-                left: 15px;
-                background-image: url(../image/plussign-normal.png);
-                background-size: contain;
-                background-repeat: no-repeat;
-            }    
-        }
         .coin {
             width: 95px;
             height: 50px;
+            padding: 9px 0 13px;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
+            font-size: 15px;
+            letter-spacing: 2px;
+            font-weight: bold;
+            box-sizing: border-box;
             background-image: url(../image/coin.png);
             background-size: contain;
             background-repeat: no-repeat;
+            .coinsign {
+                width: 30px;
+                height: 50%;
+                background-image: url(../image/coinsign.png);
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+            .coincounter {
+                height: 50%;
+                color: #FFE500;
+            }
         }
         .winbox {
             width: 398px;
@@ -117,61 +228,83 @@ body {
             background-image: url(../image/winbox.png);
             background-size: contain;
             background-repeat: no-repeat;
-        }        
-        .turbo {
-            width: 78px;
-            height: 48px;
-            margin-right: 4px;
-            padding: 4px;
-            box-sizing: border-box;
-            background-image: url(../image/btn-turbo-on.png);
-            background-size: contain;
-            background-repeat: no-repeat; 
-            .checkbox {
-                height: 25px;
+        }       
+        
+        .autospin {
+            height: 52px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            .btn-auto {
+                width: 188px;
+                height: 53px;
+                padding-left: 20px;
                 position: relative;
                 display: flex;
-                justify-content: center;
                 align-items: center;
-                background-image: url(../image/turbo-normal.png);
+                justify-content: left;
+                box-sizing: border-box;
+                background-image: url(../image/auto-normal.png);
                 background-size: contain;
                 background-repeat: no-repeat;
             }
-            .checkbox::after {
+            .btn-auto:hover {
+                background-image: url(../image/auto-hover.png);
+            }
+            .btn-auto::after {
                 content: " ";
-                width: 50px;
+                width: 45px;
                 height: 40px;
                 position: absolute;
-                top: 6px;
-                left: 9px;
-                background-image: url(../image/fontturbo-normal.png);
+                top: 20px;
+                left: 35px;
+                background-image: url(../image/fontauto-normal.png);
                 background-size: contain;
                 background-repeat: no-repeat;
-            } 
+            }
+            .spinselect {
+                width: 170px;
+                height: 0;
+                padding: 10px 0 10px 15px;
+                position: absolute;
+                top: 10px;
+                right: 3px;
+                background-image: url(../image/spinselect.png);
+                background-size: cover;
+                background-repeat: no-repeat;
+                transition: .9s linear;
+                overflow-y: hidden;
+                ul {
+                    li {
+                        display: flex;
+                        font-size: 15px;
+                        letter-spacing: 2px;
+                        font-weight: bold;
+                        color: #FFD100;
+                        margin-bottom: 3px;
+                        .feature-normal {
+                            width: 16px;
+                            height: 16px;
+                            background-image: url(../image/feature-normal.png);
+                            background-repeat: no-repeat;
+                            background-size: contain;
+                        }
+                    }
+                    li:hover  {
+                        cursor: auto;
+                        color: #FFF; 
+                        .feature-normal {
+                            background-image: url(../image/feature-hover.png);
+                        } 
+                    }
+                }
+            }            
         }
-        .btn-auto {
-            width: 188px;
-            height: 53px;
-            padding-left: 20px;
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: left;
-            box-sizing: border-box;
-            background-image: url(../image/auto-normal.png);
-            background-size: contain;
-            background-repeat: no-repeat;
-        }
-        .btn-auto::after {
-            content: " ";
-            width: 45px;
-            height: 40px;
-            position: absolute;
-            top: 20px;
-            left: 35px;
-            background-image: url(../image/fontauto-normal.png);
-            background-size: contain;
-            background-repeat: no-repeat;
+        .autospin:hover {
+            .spinselect {
+                height: 152px;
+                top: -138px;
+            }
         } 
     }
     .spin {
@@ -208,5 +341,8 @@ body {
                 transform: rotateZ(0deg); 
             }
         } 
+    }
+    .spin:hover {
+        background-image: url(../image/bgspin-hover.png);
     }
 }
