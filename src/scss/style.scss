@@ -2,6 +2,7 @@
 @import "spin";
 @import "autospin";
 @import "turbo";
+@import "btn-info";
 
 @font-face {
     font-family: "MyriadPro";
@@ -10,33 +11,6 @@
 }
 body {
     font-family: "MyriadPro", sans-serif;
-}
-
-
-.btn-info {
-    width: 55px;
-    height: 55px;
-    position: relative;       
-    background-image: url(../image/btn-info-normal.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    cursor: pointer;
-
-    &:hover {
-        background-image: url(../image/btn-info-hover.png);
-    }
-
-    &:after {
-        content: " ";
-        width: 9px;
-        height: 28px;
-        position: absolute;
-        top: 13px;
-        left: 22px;
-        background-image: url(../image/info-sign.png);
-        background-size: contain;
-        background-repeat: no-repeat;
-    }
 }
 
 .total-bet {
