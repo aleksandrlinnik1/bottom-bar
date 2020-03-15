@@ -19,7 +19,6 @@
         background-image: url(../image/bgspin-click.png);
     }
     &.disabled {
-        pointer-events: none;
         background-image: url(../image/bgspin-disable.png);
     }
     &.stop .sign{
